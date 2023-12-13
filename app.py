@@ -105,7 +105,8 @@ def main():
 
         imgContours=img.copy()
         cv2.drawContours(imgContours,countours,-1,(0,255,0),10 )
-        cv2_imshow(imgContours)
+        #cv2_imshow(imgContours)
+        st.image(imgContours, channels="BGR")
 
         def rectCountour(coutours):
 
