@@ -271,13 +271,13 @@ def main():
 
         correct = 0
         wrong = 0
-        not_answered = 0
+        Not_Answered = 0
 
         for i in range(0,25):
           if(selected_ans1[i]==-1):
             wrong+=1
           elif selected_ans1[i]==-2:
-            Not_Answerd+=1
+            Not_Answered+=1
           elif selected_ans1[i]+1==correct_ans1[i]:
             correct+=1
           else:
@@ -287,7 +287,7 @@ def main():
           if(selected_ans2[i]==-1):
             wrong+=1
           elif selected_ans2[i]==-2:
-            Not_Answerd+=1
+            Not_Answered+=1
           elif selected_ans2[i]+1==correct_ans2[i]:
             correct+=1
           else:
