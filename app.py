@@ -296,7 +296,7 @@ def main():
 
         st.write(f"Correct: {correct}")
         st.write(f"Wrong: {wrong}")
-        st.write(f"Not Answered: {not_answered}")
+        st.write(f"Not Answered: {Not_Answered}")
 
 if __name__ == "__main__":
     main()
