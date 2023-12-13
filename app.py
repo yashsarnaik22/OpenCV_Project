@@ -146,7 +146,8 @@ def main():
 
 
 
-        cv2_imshow(imgBiggestContours)
+        #cv2_imshow(imgBiggestContours)
+        st.image(imgContours, channels="BGR")
 
         def reorder(myPoints):
           myPoints=myPoints.reshape((4,2))
@@ -178,7 +179,9 @@ def main():
 
         imgWarpColored1=cv2.warpPerspective(img,matrix1,(widthImg,heightImg))
 
-        cv2_imshow(imgWarpColored1)
+        #cv2_imshow(imgWarpColored1)
+        st.image(imgWarpColored1, channels="BGR")
+        
 
 
         #second box
@@ -190,7 +193,8 @@ def main():
 
         imgWarpColored2=cv2.warpPerspective(img,matrix2,(widthImg,heightImg))
 
-        cv2_imshow(imgWarpColored2)
+        #cv2_imshow(imgWarpColored2)
+        st.image(imgWarpColored1, channels="BGR")
 
         def splitBoxes(img):
           rows=np.vsplit(img,25)
