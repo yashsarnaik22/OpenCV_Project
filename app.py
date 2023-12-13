@@ -201,7 +201,7 @@ def main():
           rows=np.vsplit(img,25)
           boxes=[]
           # cv2_imshow(rows[24])
-          st.image(rows[24], channels="BGR")
+          st.image(rows[24])
           for r in rows:
             cols=np.hsplit(r,4)
 
