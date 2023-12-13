@@ -68,7 +68,7 @@ def extract_student_answers(pixel_matrix, threshold=10000):
 def main():
     st.title("Answer Evaluation App")
 
-    st.title("Upload Image and Get Path")
+    st.header("Upload OMR Sheet Image and get results")
 
     uploaded_file = st.file_uploader("Upload Image", type=["jpg", "png", "jpeg"])
 
