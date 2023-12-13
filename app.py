@@ -66,7 +66,7 @@ def extract_student_answers(pixel_matrix, threshold=10000):
     # Implementation of extract_student_answers function...
 
 def main():
-    st.title("Answer Evaluation App")
+    st.title("Answer Evaluation App using OpenCV")
 
     st.header("Upload OMR Sheet Image and get results")
 
@@ -83,8 +83,8 @@ def main():
       st.image(path)
       st.write("File path:", path)
 
-    correct_ans1 = st.text_input("Enter Correct Answers 1 (comma-separated):")
-    correct_ans2 = st.text_input("Enter Correct Answers 2 (comma-separated):")
+    correct_ans1 = st.text_input("Enter Correct Answers 1 to 25 (comma-separated):")
+    correct_ans2 = st.text_input("Enter Correct Answers 25 t0 50 (comma-separated):")
 
     if st.button("Process"):
         img = cv2.imread(path)
