@@ -212,11 +212,13 @@ def main():
 
         imgWarpGray1=cv2.cvtColor(imgWarpColored1,cv2.COLOR_BGR2GRAY)
         imgThresh1=cv2.threshold(imgWarpGray1,100,255,cv2.THRESH_BINARY_INV)[1]
-        cv2_imshow(imgThresh1)
+        # cv2_imshow(imgThresh1)
+        st.image(imgThresh1, channels="BGR")
 
         imgWarpGray2=cv2.cvtColor(imgWarpColored2,cv2.COLOR_BGR2GRAY)
         imgThresh2=cv2.threshold(imgWarpGray2,100,255,cv2.THRESH_BINARY_INV)[1]
-        cv2_imshow(imgThresh2)
+        # cv2_imshow(imgThresh2)
+        st.image(imgThresh2, channels="BGR")
 
         boxes1=splitBoxes(imgThresh1)
         boxes2=splitBoxes(imgThresh2)
