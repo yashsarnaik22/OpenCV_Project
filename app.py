@@ -1,6 +1,7 @@
 import cv2
 import numpy as np
 import streamlit as st
+from PIL import Image
 from tempfile import NamedTemporaryFile
 
 def stackImages(imgArray, scale):
@@ -213,12 +214,24 @@ def main():
         imgWarpGray1=cv2.cvtColor(imgWarpColored1,cv2.COLOR_BGR2GRAY)
         imgThresh1=cv2.threshold(imgWarpGray1,100,255,cv2.THRESH_BINARY_INV)[1]
         # cv2_imshow(imgThresh1)
-        st.image(imgThresh1, channels="BGR")
+        imgThresh1_rgb = cv2.cvtColor(imgThresh1, cv2.COLOR_BGR2RGB)
+
+        # Convert the NumPy array to a PIL Image object
+        img_pil1 = Image.fromarray(imgThresh1_rgb)
+
+        # Display the image using st.image()
+        st.image(img_pil1)
 
         imgWarpGray2=cv2.cvtColor(imgWarpColored2,cv2.COLOR_BGR2GRAY)
         imgThresh2=cv2.threshold(imgWarpGray2,100,255,cv2.THRESH_BINARY_INV)[1]
         # cv2_imshow(imgThresh2)
-        st.image(imgThresh2, channels="BGR")
+        imgThresh1_rgb = cv2.cvtColor(imgThresh2, cv2.COLOR_BGR2RGB)
+
+        # Convert the NumPy array to a PIL Image object
+        img_pil2 = Image.fromarray(imgThresh1_rgb)
+
+        # Display the image using st.image()
+        st.image(img_pil2)
 
         boxes1=splitBoxes(imgThresh1)
         boxes2=splitBoxes(imgThresh2)
