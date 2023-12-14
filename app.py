@@ -66,6 +66,64 @@ def extract_student_answers(pixel_matrix, threshold=10000):
     # Implementation of extract_student_answers function...
 
 def main():
+    st.write(
+    """
+    <div id="text" style="writing-mode: vertical-lr; text-align: center; font-size: 20px; 
+                font-family: 'Arial Narrow', sans-serif; color: black;">
+        A
+    </div>
+    <div id="text" style="writing-mode: vertical-lr; text-align: center; font-size: 20px; 
+                font-family: 'Arial Narrow', sans-serif; color: black;">
+        N
+    </div>
+    <div id="text" style="writing-mode: vertical-lr; text-align: center; font-size: 20px; 
+                font-family: 'Arial Narrow', sans-serif; color: black;">
+        S
+    </div>
+    <div id="text" style="writing-mode: vertical-lr; text-align: center; font-size: 20px; 
+                font-family: 'Arial Narrow', sans-serif; color: black;">
+        W
+    </div>
+    <div id="text" style="writing-mode: vertical-lr; text-align: center; font-size: 20px; 
+                font-family: 'Arial Narrow', sans-serif; color: black;">
+        E
+    </div>
+    <div id="text" style="writing-mode: vertical-lr; text-align: center; font-size: 20px; 
+                font-family: 'Arial Narrow', sans-serif; color: black;">
+        R
+    </div>
+    <div id="text" style="writing-mode: vertical-lr; text-align: center; font-size: 20px; 
+                font-family: 'Arial Narrow', sans-serif; color: black;">
+        &nbsp;
+    </div>
+    <div id="text" style="writing-mode: vertical-lr; text-align: center; font-size: 20px; 
+                font-family: 'Arial Narrow', sans-serif; color: black;">
+        I
+    </div>
+    <div id="text" style="writing-mode: vertical-lr; text-align: center; font-size: 20px; 
+                font-family: 'Arial Narrow', sans-serif; color: black;">
+        T
+    </div>
+
+    <script>
+        const textElements = document.querySelectorAll('[id="text"]');
+        const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+
+        const changeTextColor = darkMode => {
+            textElements.forEach(element => {
+                element.style.color = darkMode ? 'white' : 'black';
+            });
+        };
+
+        changeTextColor(darkModeMediaQuery.matches);
+
+        darkModeMediaQuery.addListener(e => {
+            changeTextColor(e.matches);
+        });
+    </script>
+    """
+)
+  
     st.title("Answer Evaluation App using OpenCV")
 
     st.header("Upload OMR Sheet Image and get results")
